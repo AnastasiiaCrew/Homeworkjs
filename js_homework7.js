@@ -2,7 +2,7 @@ function pad(string, symbol, count, isBeginning) {
     if (count > string.lenght) 
         return (isBeginning) ? symbol.repeat(count - string.length).concat(string) : string.concat(symbol.repeat(count - string.length));
     else {
-        return string;
+        return string
     }
 }
 
