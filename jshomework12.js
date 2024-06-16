@@ -43,11 +43,11 @@ const company = {
   
   function findValueByKey(object, companyName) {
     for (let key in object) {
-        if (object[key] === companyName) {  // Виправлено на companyName
+        if (object[key] === companyName) {  
             let clonedObject = Object.assign({}, object);
             delete clonedObject.clients;
             return clonedObject;
-        } else if (Array.isArray(object[key])) {  // Виправлено else if
+        } else if (Array.isArray(object[key])) {  
             let array = object[key];
             for (const index in array) {
                 let result = findValueByKey(array[index], companyName);
